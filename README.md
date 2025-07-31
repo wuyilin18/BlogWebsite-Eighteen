@@ -17,7 +17,7 @@
 
   ### 效果图
 
-![博客系统示例图](C:\Users\十八\AppData\Roaming\Typora\typora-user-images\image-20250731161653160.png)
+![博客系统示例图](https://cdn.wuyilin18.top/img/%E5%8D%9A%E5%AE%A2%E6%95%88%E6%9E%9C%E5%9B%BE.webp)
 
 ## 环境要求
 
@@ -428,8 +428,7 @@ TWIKOO_ADMIN_PASS=your_admin_password
 ## 技术支持
 
 如遇技术问题，请提交Issue：
-[前端问题](https://github.com/yourusername/blog-frontend/issues)
-[后端问题](https://github.com/yourusername/blog-backend/issues)
+[前后端问题](https://github.com/wuyilin18/BlogWebsite-SiliconNebula/issues)
 
 ## 许可证
 
