@@ -1,0 +1,49 @@
+{
+  "name": "my-strapi-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/admin": "^5.18.1",
+    "@strapi/plugin-cloud": "5.14.0",
+    "@strapi/plugin-users-permissions": "5.14.0",
+    "@strapi/strapi": "5.14.0",
+    "algoliasearch": "^4.24.0",
+    "better-sqlite3": "11.3.0",
+    "qs": "^6.14.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "recharts": "^2.15.3",
+    "strapi-plugin-algolia": "^0.0.0",
+    "strapi-plugin-strapi-algolia": "^2.0.4",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^20",
+    "@types/qs": "^6.14.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "321ed86b-7e8b-41f6-a26f-3a3a4e32540a",
+    "installId": "eb7b9c305fd0f99fdc60003d39856e92e23bfde93876b9e1cc8c4b535d5757a9"
+  }
+}

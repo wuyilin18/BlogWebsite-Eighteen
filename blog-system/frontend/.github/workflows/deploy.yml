@@ -1,0 +1,48 @@
+name: Deploy Next.js to Vercel
+
+on:
+  push:
+    branches: ["main"] # 仅在 main 分支触发
+  pull_request:
+    branches: ["main"] # PR 时也触发（可选）
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 推荐使用 LTS 版本
+
+      # 3. 缓存依赖（加速构建）
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('yarn.lock') }}
+
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: yarn install # 或 npm install
+
+      # 5. 构建 Next.js 项目
+      - name: Build
+        run: yarn build # 或 npm run build
+
+      # 6. 部署到 Vercel
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # 引用 GitHub Secrets
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # 可选（团队项目需要）
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # 可选
+          scope: your-vercel-team-name # 可选（团队名称）

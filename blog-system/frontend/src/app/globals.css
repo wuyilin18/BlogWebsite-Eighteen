@@ -1,0 +1,604 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+
+  --animate-aurora: aurora 8s ease-in-out infinite alternate;
+
+  @keyframes aurora {
+    0% {
+      backgroundposition: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+
+    25% {
+      backgroundposition: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    50% {
+      backgroundposition: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
+    }
+
+    75% {
+      backgroundposition: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
+    }
+
+    100% {
+      backgroundposition: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+  }
+
+  --animate-meteor: meteor 5s linear infinite;
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
+    }
+  }
+
+  --animate-rippling: rippling var(--duration) ease-out;
+
+  @keyframes rippling {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* dock组件导航栏样式 */
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 平滑的暗黑模式切换 */
+html {
+  @apply transition-colors duration-300;
+}
+
+body {
+  @apply min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+}
+
+@layer components {
+  .dock-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+/* 滚动视差化组件 */
+/* 移动端触控优化 */
+@supports (-webkit-touch-callout: none) {
+  .parallax-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* 前景层移动端适配 */
+@media (max-width: 768px) {
+  .foreground-layer {
+    mask-image: linear-gradient(to top, transparent 0%, black 30%) !important;
+    transform: translateY(8%) scale(1.05) !important;
+  }
+
+  .parallax-text {
+    font-size: 2.5rem !important;
+    padding: 0 1rem;
+  }
+}
+
+/* 禁用长按菜单 */
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+/* 轨道圆 */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateY(-50px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(-50px) rotate(-360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit var(--duration) linear infinite;
+  animation-delay: calc(-1 * var(--delay));
+  animation-direction: var(--direction);
+  position: absolute;
+  transform-origin: center center;
+}
+
+/*  FlipWords 组件动画 */
+@keyframes fadeInWord {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeInLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* 过渡动画 */
+.flip-enter-active {
+  animation: enterWord 0.6s ease-in-out forwards;
+}
+
+.flip-leave-active {
+  animation: leaveWord 0.6s ease-in-out forwards;
+}
+
+@keyframes enterWord {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leaveWord {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    filter: blur(8px);
+  }
+}
+
+/* 文本高光 */
+/* globals.css 或 TextHighlight.module.css */
+@keyframes background-expand {
+  0% {
+    background-size: 0% 100%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes text-color-change {
+  0% {
+    color: inherit;
+  }
+
+  100% {
+    color: var(--text-end-color, inherit);
+  }
+}
+
+/* Meteor Effect */
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+/* 平滑的主题过渡 */
+html {
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+/* 基础过渡效果 */
+html {
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+/* 减少运动时的优化 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 积雪微光效果 */
+@keyframes snow-shine {
+
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-snow-shine {
+  animation: snow-shine 3s ease-in-out infinite;
+}
+
+/* 雪花飘落动画 */
+@keyframes falling {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-falling path {
+  animation: falling 3s ease-in-out infinite alternate;
+}
+
+/* 添加技术卡片上下滚动动画 */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scrollUp 25s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scrollDown 25s linear infinite;
+}
+
+/* 确保滚动内容有足够高度重复 */
+.animate-scroll-up,
+.animate-scroll-down {
+  min-height: 200%;
+}
+
+/* Animated Tabs */
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* =============================================== */
+/* ============== Glitch Button Style ============== */
+/* =============================================== */
+.btn-glitch {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #c7d2fe;
+  /* 淡紫色文字 */
+  border: 2px solid #4f46e5;
+  /* 靛蓝色边框 */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  /* 隐藏超出边界的伪元素 */
+}
+
+/* 悬停时的基础样式变化 */
+.btn-glitch:hover {
+  background-color: #3730a3;
+  /* 深靛蓝色背景 */
+  color: #fff;
+}
+
+/* 伪元素 ::before 和 ::after 用于创建故障效果 */
+.btn-glitch::before,
+.btn-glitch::after {
+  content: attr(data-text);
+  /* 获取 data-text 属性的内容 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111827;
+  /* 和页面背景色一致 */
+  overflow: hidden;
+}
+
+/* ::before 伪元素 (红色故障层) */
+.btn-glitch::before {
+  left: 3px;
+  text-shadow: -2px 0 #ef4444;
+  /* 红色文字阴影 */
+  /* 使用 clip-path 裁切出不规则形状 */
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+/* ::after 伪元素 (蓝色故障层) */
+.btn-glitch::after {
+  left: -3px;
+  text-shadow: -2px 0 #3b82f6, 2px 2px #3b82f6;
+  /* 蓝色文字阴影 */
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+/* 悬停时，激活伪元素的动画 */
+.btn-glitch:hover::before {
+  animation: glitch-anim 0.8s infinite linear alternate-reverse;
+}
+
+.btn-glitch:hover::after {
+  animation: glitch-anim-2 0.8s infinite linear alternate-reverse;
+}
+
+/* 定义故障动画的关键帧 */
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(3px, -3px);
+  }
+
+  60% {
+    transform: translate(-3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(3px, -3px);
+  }
+
+  40% {
+    transform: translate(-3px, 3px);
+  }
+
+  60% {
+    transform: translate(3px, -3px);
+  }
+
+  80% {
+    transform: translate(-3px, 3px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*----------ripple样式代码----------------*/
+@theme inline {
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+
+  @keyframes ripple {
+
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}
+
+/*----------ripple样式代码----------------*/

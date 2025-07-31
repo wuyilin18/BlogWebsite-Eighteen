@@ -1,0 +1,35 @@
+/* HorizontalScroller.module.css */
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: solid #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  width: max-content;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    transition: none !important;
+  }
+}

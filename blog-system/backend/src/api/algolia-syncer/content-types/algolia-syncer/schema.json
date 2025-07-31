@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "algolia_syncers",
+  "info": {
+    "singularName": "algolia-syncer",
+    "pluralName": "algolia-syncers",
+    "displayName": "Algolia同步器",
+    "description": "用于Algolia搜索同步的API"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "CoverImage": {
+      "type": "media",
+      "multiple": false
+    },
+    "lastSyncedAt": {
+      "type": "datetime",
+      "required": false
+    },
+    "syncStatus": {
+      "type": "enumeration",
+      "default": "idle",
+      "enum": [
+        "idle",
+        "syncing",
+        "completed",
+        "failed"
+      ]
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag.tag"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

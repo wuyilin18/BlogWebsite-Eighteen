@@ -1,0 +1,6 @@
+/* 添加滚动条隐藏样式 */
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* 其他现有的全局样式保持不变 */
