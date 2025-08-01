@@ -2,11 +2,13 @@
 
 
 
-### 十八加十八 的博客网站目前已经开源啦！！！暂定名为**SiliconNebula**，原作者网站：[www.wuyilin18.top](https://www.wuyilin18.top/)，如果你喜欢的话可以帮我点一个免费的Star🌟🌟🌟哦！`(｡•̀ᴗ-)✧ 诶嘿~
+### 十八加十八 的博客网站目前已经开源啦！！！暂定名为**SiliconNebula**（**硅原星云**）`(｡•̀ᴗ-)✧ 诶嘿~
+
+### 原作者网站：[www.wuyilin18.top](https://www.wuyilin18.top/)，如果你喜欢的话可以帮我点一个免费的Star🌟🌟🌟哦！
 
 
 
-### 🚧🚧🚧本开源项目不太适合纯小白，需要一定的“前端”和”后端“（次要）经验基础，因此安装之前务必有一定的Next.js基础和Strapi后端比较熟悉，不熟悉的朋友建议提前熟悉[Next.js中文文档](https://www.nextjs.cn/docs)和[strapi文档](https://docs.strapi.io/cms/intro)，请先熟悉了解完后端的strapi文档，别上来就问文章怎么写！！！避免各种不必要的麻烦！！！望周知！！！！！！！！！！
+### 🚧🚧🚧本开源项目不太适合纯小白，需要一定的“前端”和”后端“（次要）经验基础，因此安装之前务必有一定的Next.js基础和Strapi后端比较熟悉，不熟悉的朋友建议提前熟悉[Next.js中文文档](https://www.nextjs.cn/docs)和[strapi中文文档](https://www.strapi.cn/dev-docs/intro)，请先熟悉了解完后端的strapi文档，别上来就问文章怎么写！！！避免各种不必要的麻烦！！！望周知！！！！！！！！！！
 
 
 
