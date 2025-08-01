@@ -2,7 +2,7 @@
 
 
 
-### 十八加十八 的博客网站目前已经开源啦！！！暂定名为**SiliconNebula**（**硅原星云**）`(｡•̀ᴗ-)✧ 诶嘿~
+### 十八加十八的网站目前已经开源啦！！！暂定名为**SiliconNebula**（**硅原星云**）`(｡•̀ᴗ-)✧ 诶嘿~
 
 ### 原作者网站：[www.wuyilin18.top](https://www.wuyilin18.top/)，如果你喜欢的话可以帮我点一个免费的Star🌟🌟🌟哦！
 
@@ -14,9 +14,7 @@
 
 ## 效果图
 
-![博客系统示例图](https://cdn.wuyilin18.top/img/%E5%8D%9A%E5%AE%A2%E6%95%88%E6%9E%9C%E5%9B%BE.png)
-
-
+![博客系统示例图](https://cdn.wuyilin18.top/img/%E5%8D%9A%E5%AE%A2%E6%95%88%E6%9E%9C%E5%9B%BE.webp)
 
 
 
