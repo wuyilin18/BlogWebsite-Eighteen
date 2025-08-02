@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+xxxxxxxxxx # 安装依赖工具brew install imagemagick webp​# 批量处理脚本 (scripts/process-images.sh)#!/bin/bashfor file in ./raw-images/*.{png,jpg}; do  filename=$(basename -- "$file")  extension="${filename##*.}"  filename="${filename%.*}"​  # 步骤1: 裁剪透明区域  convert "$file" -trim +repage "./temp/${filename}_trimmed.$extension"​  # 步骤2: 调整尺寸 (最大宽度2000px)  convert "./temp/${filename}_trimmed.$extension" -resize 2000x -quality 90 "./processed/${filename}.webp"​  # 步骤3: 生成预览图  convert "./temp/${filename}_trimmed.$extension" -resize 400x -quality 80 "./previews/${filename}_preview.webp"​  echo "Processed: $filename.$extension → $filename.webp"donebash
 
 ```bash
 npm run dev
