@@ -295,8 +295,8 @@ export function Footer() {
             {/* 版权信息 */}
             <div className="space-y-2 text-center text-sm text-gray-600 dark:text-gray-400 md:text-right">
               <div className="flex items-center justify-center space-x-4 md:justify-end">
-                <div>© 2025 - 2026 By 十八Eighteen</div>
-                <Image
+                <div>© 2025 - 2026 By 十八Eighteen🌲</div>
+                <Images
                   src="https://cdn.wuyilin18.top/img/avatar.png"
                   alt="头像"
                   className="mr-1 h-8 w-8"

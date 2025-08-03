@@ -597,7 +597,7 @@ export default function AboutPage() {
             >
               关于我
               <span className="absolute -top-4 -right-6 text-sm font-normal text-[#9D4EDD] dark:text-[#b0b0b0]">
-                十八加十八
+                十八加十八🌲
               </span>
             </h1>
 
@@ -924,7 +924,7 @@ export default function AboutPage() {
 
                 <div className="md:flex-1">
                   <h2 className="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200">
-                    十八加十八
+                    十八加十八🌲
                   </h2>
                   <div className="cursor-target bg-gray-50 dark:bg-gray-700/40 p-4 rounded-lg mb-4">
                     <h3 className="font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -952,7 +952,6 @@ export default function AboutPage() {
                       &rdquo;，以 &ldquo;岁寒&rdquo; 呼应雪松之志。
                     </p>
                   </div>
-
                   <div className="cursor-target bg-gray-50 dark:bg-gray-700/40 p-4 rounded-lg">
                     <h3 className="font-medium text-gray-700 dark:text-gray-300 mb-2">
                       教育背景
@@ -1937,186 +1936,270 @@ export default function AboutPage() {
             </div>
 
             {/* 关于本站 */}
-            <div className="mb-10">
+            <div className="mb-10 flex flex-col">
               <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 mt-10 mb-4">
                 关于本站
               </h2>
-              <div className="border-2 border-grey-500 rounded-lg">
-                <BackgroundBeamsWithCollision>
-                  <div
-                    className="
-                  items-center justify-center overflow-hidden  "
-                  >
-                    <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
-                      <div className="flex justify-center text-balance">
-                        <div className="text-balance pt-2 pl-2 text-start text-0.3xl">
-                          {" "}
-                          <h2 className="font-bold mt-[.5rem] text-[1.3rem] bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] bg-clip-text text-transparent dark:from-[#56CFE1] dark:to-[#FF9470]">
-                            域名
-                          </h2>
-                          <div className="font-bold pl-2 pt-1">
-                            本网站采用多线路并行部署，一份源码同时分发给多个托管商
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            主域名：
-                            <a
-                              href="https://www.wuyilin18.top/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#56CFE1] hover:underline"
-                            >
-                              wuyilin18.top
-                            </a>{" "}
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            均解析至Vercel，Vercel有全球的泛播节点，兼具全球CDN功能，国内访问速度较快{" "}
-                            <span className="text-[#56CFE1]">
-                              (Ping值：70-80ms)
-                            </span>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            备用域名1：
-                            <a
-                              href="https://netlify.wuyilin18.top"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#56CFE1] hover:underline"
-                            >
-                              netlify.wuyilin18.top
-                            </a>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            解析至Netlify，一个现代化网站自动化系统，国内访问到的节点在新加坡、加州等，国内速度尚可{" "}
-                            <span className="text-[#56CFE1]">
-                              (Ping值：90-120ms)
-                            </span>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            备用域名2：
-                            <a
-                              href="https://zeabur.wuyilin18.top"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#56CFE1] hover:underline"
-                            >
-                              zeabur.wuyilin18.top
-                            </a>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            解析至Zeabur，一个可以帮助你部署服务的平台，节点是位于台湾彰化的谷歌云，国内速度较快{" "}
-                            <span className="text-[#56CFE1]">
-                              (Ping值：50-100ms)
-                            </span>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            初始域名：
-                            <a
-                              href="https://blog-website-psi-taupe.vercel.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#56CFE1] hover:underline"
-                            >
-                              blog-website-psi-taupe.vercel.app
-                            </a>
-                          </div>
-                          {/* <div className="font-bold pl-2 pt-1">
-                            直链至Github泛播，国内速度较慢{" "}
-                            <span className="text-[#56CFE1]">
-                              (Ping值：80-120ms)
-                            </span>
-                          </div> */}
-                          {/* <div className="font-bold pl-2 pt-1">
-                            目前主域{" "}
-                            <a
-                              href="https://wuyilin18.top"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#56CFE1] hover:underline"
-                            >
-                              wuyilin18.top
-                            </a>{" "}
-                            已劫持分流至缤纷云，在国内速度非常快{" "}
-                            <span className="text-[#56CFE1]">
-                              (Ping值：30-50ms)
-                            </span>
-                          </div> */}
-                          <div className="font-bold pl-2 pt-1">
-                            以上所有线路均支持HTTPS协议
-                          </div>
-                          <h2 className="font-bold mt-[2.5rem] text-[1.3rem] bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] bg-clip-text text-transparent dark:from-[#56CFE1] dark:to-[#FF9470]">
-                            技术栈
-                          </h2>
-                          <div className="font-bold pl-2 pt-1">
-                            源码仓库：<AuroraText>Github</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            前端：
-                            <AuroraText>
-                              Next.js + Tailwind CSS + TypeScript
-                            </AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            后端：
-                            <AuroraText>Strapi + 阿里云服务器</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            数据库：<AuroraText>MongoDB</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            托管与部署：
-                            <AuroraText>Vercel + 阿里云服务器</AuroraText>{" "}
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            评论系统：<AuroraText>Twikoo</AuroraText>系统 +{" "}
-                            <AuroraText>Vercel</AuroraText>部署 +{" "}
-                            <AuroraText>MongoDB</AuroraText>提供存储服务
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            图床：
-                            <AuroraText>PicGo + 去不图床</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            CDN：
-                            <AuroraText>Github + Vercel</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            图片压缩：<AuroraText>Squoosh </AuroraText>
-                            转化图片格式为webp格式
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            自动部署：
-                            <AuroraText>Git 钩子 + Github Action</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            SEO优化：<AuroraText>谷歌 + 必应 + 百度</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            博客统计：
-                            <AuroraText>不蒜子</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            渐进加载与缓存加速技术：
-                            <AuroraText>Framer Motion</AuroraText>
-                          </div>
-                          <div className="font-bold pl-2 pt-1">
-                            开发语言：
-                            <AuroraText>
-                              Next.js + Tailwind CSS + TypeScript
-                            </AuroraText>
-                          </div>
-                          {/* <div className="font-bold pl-2 pt-1">
-                            维护日志：见旧<AuroraText>时光</AuroraText>栏目
-                          </div> */}
-                          <div className="font-bold pl-2 pt-1">
-                            AI工具或模型：
-                            <AuroraText>
-                              DeepSeek + Cursor + Gemini-2.5-pro
-                            </AuroraText>
-                          </div>
+              <div className="border-2 border-grey-50 rounded-lg">
+                <BackgroundBeamsWithCollision className="h-50rem md:h-[40rem]">
+                  <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
+                    <div className="w-full p-8 text-start text-0.3xl">
+                      {" "}
+                      <h2 className="font-bold mt-[.5rem] text-[1.6rem] bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] bg-clip-text text-transparent dark:from-[#56CFE1] dark:to-[#FF9470]">
+                        域名
+                      </h2>
+                      <div className="font-bold pl-2 pt-5 text-[1.1rem]">
+                        本网站采用多线路并行部署，一份源码同时分发给多个托管商
+                      </div>
+                      <div className=" pl-2 pt-5">
+                        主域名：
+                        <AuroraText>
+                          <a
+                            href="https://www.wuyilin18.top/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            wuyilin18.top
+                          </a>
+                        </AuroraText>{" "}
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        解析至Vercel，Vercel有全球的泛播节点，兼具全球CDN功能，国内访问速度较快{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：70-80ms)</AuroraText>
                         </div>
                       </div>
-                    </BoxReveal>
-                  </div>
+                      <div className=" pl-2 pt-5">
+                        备用域名1：
+                        <AuroraText>
+                          <a
+                            href="https://netlify.wuyilin18.top"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            netlify.wuyilin18.top
+                          </a>
+                        </AuroraText>
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        解析至Netlify，一个现代化网站自动化系统，国内访问到的节点在新加坡、加州等，国内速度尚可{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：90-120ms)</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-5">
+                        备用域名2：
+                        <AuroraText>
+                          <a
+                            href="https://zeabur.wuyilin18.top"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            zeabur.wuyilin18.top
+                          </a>
+                        </AuroraText>
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        解析至Zeabur，一个可以帮助你部署服务的平台，节点是位于台湾彰化的谷歌云，国内速度较快{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：50-100ms)</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-5">
+                        初始域名：
+                        <AuroraText>
+                          <a
+                            href="https://blog-website-psi-taupe.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            blog-website-psi-taupe.vercel.app
+                          </a>
+                        </AuroraText>
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        解析至Vercel，Vercel有全球的泛播节点，兼具全球CDN功能，国内访问速度较快{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：70-80ms)</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-5">
+                        其他网站 1：
+                        <AuroraText>
+                          <a
+                            href="https://blog.wuyilin18.top/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            blog.wuyilin18.top
+                          </a>
+                        </AuroraText>
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        解析至Vercel，Vercel有全球的泛播节点，兼具全球CDN功能，国内访问速度较快{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：70-80ms)</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-5">
+                        其他网站 2：
+                        <AuroraText>
+                          <a
+                            href="https://wuyilin18.github.io/mysite/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold hover:underline"
+                          >
+                            wuyilin18.github.io/mysite/
+                          </a>
+                        </AuroraText>
+                      </div>
+                      <div className=" pl-2 pt-1 flex">
+                        直链至Github泛播，国内速度较慢{" "}
+                        <div className="font-bold">
+                          <AuroraText>(Ping值：80-120ms)</AuroraText>
+                        </div>
+                      </div>
+                      <div className="font-bold pl-2 pt-5 text-[1.1rem]">
+                        以上所有线路均支持HTTPS协议
+                      </div>
+                    </div>
+                  </BoxReveal>
+                </BackgroundBeamsWithCollision>
+              </div>
+              <div className="border-2 border-grey-50 rounded-lg mt-10">
+                <BackgroundBeamsWithCollision className="h-55rem md:h-[45rem]">
+                  <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
+                    <div className="w-full p-8 text-start text-0.3xl">
+                      <h2 className="font-bold  text-[1.6rem] bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] bg-clip-text text-transparent dark:from-[#56CFE1] dark:to-[#FF9470]">
+                        技术栈
+                      </h2>
+                      <div className=" pl-2 pt-6 flex flex">
+                        源码仓库：
+                        <div className="font-bold">
+                          <AuroraText>
+                            <a
+                              href="https://github.com/wuyilin18/BlogWebsite-SiliconNebula"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              Github
+                            </a>
+                          </AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        前端：
+                        <div className="font-bold">
+                          <AuroraText>
+                            Next.js + Tailwind CSS + TypeScript
+                          </AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        后端：
+                        <div className="font-bold">
+                          <AuroraText>Strapi + 阿里云服务器</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        数据库：
+                        <div className="font-bold">
+                          <AuroraText>MongoDB</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        托管与部署：
+                        <div className="font-bold">
+                          <AuroraText>Vercel + 阿里云服务器</AuroraText>
+                        </div>{" "}
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        评论系统：
+                        <div className="font-bold">
+                          <AuroraText>Twikoo</AuroraText>
+                        </div>
+                        系统 +
+                        <div className="font-bold">
+                          <AuroraText>Vercel</AuroraText>
+                        </div>
+                        部署 +{" "}
+                        <div className="font-bold">
+                          <AuroraText>MongoDB</AuroraText>
+                        </div>
+                        提供存储服务
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        图床：
+                        <div className="font-bold">
+                          <AuroraText>PicGo + 去不图床</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        CDN：
+                        <div className="font-bold">
+                          <AuroraText>Github + Vercel</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        图片压缩：
+                        <div className="font-bold">
+                          <AuroraText>Squoosh </AuroraText>
+                        </div>
+                        转化图片格式为webp格式
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        自动部署：
+                        <div className="font-bold">
+                          <AuroraText>Git 钩子 + Github Action</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        SEO优化：
+                        <div className="font-bold">
+                          <AuroraText>谷歌 + 必应 + 百度</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        博客统计：
+                        <div className="font-bold">
+                          <AuroraText>不蒜子</AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        渐进加载与缓存加速技术：
+                        <div className="font-bold">
+                          {" "}
+                          <AuroraText>Framer Motion</AuroraText>
+                        </div>
+                      </div>
+
+                      <div className=" pl-2 pt-4 flex">
+                        开发语言：
+                        <div className="font-bold">
+                          {" "}
+                          <AuroraText>
+                            Next.js + Tailwind CSS + TypeScript
+                          </AuroraText>
+                        </div>
+                      </div>
+                      <div className=" pl-2 pt-4 flex">
+                        AI工具或模型：
+                        <div className="font-bold">
+                          {" "}
+                          <AuroraText>
+                            DeepSeek + Cursor + Gemini-2.5-pro
+                          </AuroraText>
+                        </div>
+                      </div>
+                    </div>
+                  </BoxReveal>
                 </BackgroundBeamsWithCollision>
               </div>
             </div>

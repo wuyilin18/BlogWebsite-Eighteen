@@ -15,6 +15,9 @@ import { StrapiResponse } from "@/types/strapi";
 import { getPosts } from "@/lib/strapi";
 import Link from "next/link";
 import ArticleList from "@/components/ArticleList";
+import SplitText from "@/components/reactbits/SplitText";
+import TextType from "@/components/reactbits/TextType";
+
 // 将主页面组件保持为服务器端组件
 export default async function Home() {
   // 获取最4新的篇文章
@@ -481,18 +484,45 @@ export default async function Home() {
         />
       </main>
       {/* 盒子显示动画 */}
-      <div className="h-[40rem] flex flex-col items-center justify-center overflow-hidden z-6">
+      <div className=" flex flex-col items-center justify-center overflow-hidden z-6">
         <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
-          <WordRotate
-            className="h-[5rem] text-[3.5rem] font-semibold bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] dark:from-[#56CFE1] dark:to-[#FF9470] bg-clip-text text-transparent"
-            words={["Welcome to My Tech Blog.", "技术漫游指南。"]}
-          />
-        </BoxReveal>
-        <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
-          <h2 className="mt-[2.5rem] text-[1.5rem] text-[#5a5a5a] dark:text-[#b0b0b0]">
-            《硅原逐梦：二进制牧歌与云端史诗》——在数字荒原上，我以API为经，界面为纬，编织0与1的游牧传说
+          <h2 className="mt-[2.5rem] text-[3.5rem] ">
+            <TextType
+              className=" font-semibold text-[#5a5a5a] dark:text-[#b0b0b0]"
+              text={[
+                "Welcome to Eighteen🌲のTiny Home!",
+                "Hope you have a nice day!❄️",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+            />
           </h2>
+          {/* <WordRotate
+            className="h-[5rem] text-[3.5rem] font-semibold bg-gradient-to-r from-[#56CFE1] to-[#9D4EDD] dark:from-[#56CFE1] dark:to-[#FF9470] bg-clip-text text-transparent"
+            words={[
+              "Welcome to Eighteen🌲のTiny Home!",
+              "Hope you have a nice day!❄️",
+            ]}
+          /> */}
         </BoxReveal>
+        <h2 className="mt-[2.5rem] text-[1.5rem] text-[#5a5a5a] dark:text-[#b0b0b0]">
+          <SplitText
+            text="《硅原逐梦：二进制牧歌与云端史诗》——在数字荒原上，我以API为经，界面为纬，编织0与1的游牧传说"
+            className="text-2xl font-semibold text-center"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+        </h2>
+
         <BoxReveal boxColor={"#56CFE1"} duration={0.5}>
           <div className="flex justify-center text-balance mt-5 px-4">
             <div className="text-balance border-1 border-gray-500 rounded-xl w-full max-w-[80rem] md:min-w-[40rem] lg:min-w-[60rem] xl:min-w-[75rem] h-[21rem] overflow-hidden relative flex items-center">
